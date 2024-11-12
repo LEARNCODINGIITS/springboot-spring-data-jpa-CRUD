@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.iits.main.entity.Product;
+import com.iits.main.exception.ResourceNotFoundException;
 import com.iits.main.repository.ProductRepository;
 
 @Service
@@ -23,7 +24,9 @@ public class ProductService implements ProductDAO {
 
 	@Override
 	public Product findById(int pid) {
-		return this.productRepository.findById(pid).orElseThrow(() -> new RuntimeException("PRODUCT NOT FOUND"));
+		return this.productRepository
+				  .findById(pid)
+				  .orElseThrow(() -> new ResourceNotFoundException("PRODUCT NOT FOUND"));
 
 	}
 
