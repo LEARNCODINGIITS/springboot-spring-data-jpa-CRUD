@@ -275,15 +275,6 @@ Examples of HTTP Status Code Usage in Real Applications
 •	500 Internal Server Error: If there’s an unexpected issue on the server, a 500 Internal Server Error is returned, indicating the need for technical troubleshooting.
 HTTP status codes are essential for effective client-server communication, making it easier to design, troubleshoot, and maintain web services and applications.
 
-
-
-
-
-
-
-
-
-
 Spring Data JPA With Hibernate by using Spring Boot
 •	JDBC -> Hibernate->ORM
 •	Spring -> JDBCTemplate
@@ -317,4 +308,15 @@ Spring Boot Annotation
 -	It is used to create RESTful webservices
 -	It is used to simply the development of RESTful API by eliminating the need to annotate each method with @ResponseBody
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+S.NO	ANNOTATION	DESCRPITION
+1.	@ControllerAdvice	It is used to tell the spring that the class will handle the exceptions for all the controllers in the application.
+2.	@ExceptionHandler	It is used to handle the exception of the corresponding method i.e. method can handle that exception which is raised. 
+                                 Example : ResourceNotFoundException
+3.	ResponseEntity	        It is class which is used to send the information like 
+I.	Header
+II.	Status Code
+III.	Body
+		
 
